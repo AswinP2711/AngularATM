@@ -1,0 +1,15 @@
+<h3>Array of Object Ops</h3>
+<div class="search">
+  <input type="text" placeholder="Search by name" [(ngModel)]="ename" (change)='search("name")'> &nbsp;&nbsp;&nbsp;
+  <input type="text" placeholder="Search by city" [(ngModel)]="ecity" (keyup)='search("city")'>
+</div>
+<div class="sort">
+<button (click)="sortEmployees('ASC')">Salary Sort : ASC</button> &nbsp;&nbsp;&nbsp;
+<button (click)="sortEmployees('DESC')">Salary Sort : DESC</button>
+</div>
+<div class="employee-box" *ngFor="let e of employees">
+  ID:{{e.id}} <br>
+  Name:{{e.name}} <br>
+  Salary:{{e.salary}} <br>
+  City:{{e.city}}
+</div>

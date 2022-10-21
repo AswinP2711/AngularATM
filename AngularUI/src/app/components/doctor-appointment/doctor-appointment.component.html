@@ -1,0 +1,29 @@
+<div>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>From Time</th>
+            <th>To Time</th>
+            <th>Doctor Name</th>
+            <th>Doctor Address</th>
+            <th>Customer Name</th>
+            <th>Customer Address</th>
+            <th>Customer Mobile</th>
+            <th>Status</th>
+        </tr>
+        <tr *ngFor="let d of doctorAppointments">
+                <td>{{d.id}}</td>
+                <td>{{d.doctorSchedule.date}}</td>
+                <td>{{d.doctorSchedule.from_time}}</td>
+                <td>{{d.doctorSchedule.to_time}}</td>
+                <td>{{d.doctorSchedule.doctor.name}}</td>
+                <td>{{d.doctorSchedule.doctor.address}}</td>
+                <td>{{d.customer.name}}</td>
+                <td>{{d.customer.city}}</td>
+                <td>{{d.customer.phone_no}}</td>
+                <td>{{d.status}}</td>
+        </tr>
+
+    </table>
+</div>
